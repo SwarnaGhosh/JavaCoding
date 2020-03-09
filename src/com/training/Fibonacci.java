@@ -8,6 +8,11 @@ public class Fibonacci {
 
     private static int fibonacci(int n){
 
+        int a=4;
+        int b=-5;
+
+        System.out.println(a+b);
+
         if(n<1) {
             System.out.println("No terms");
         }
