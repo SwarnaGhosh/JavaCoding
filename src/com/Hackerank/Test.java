@@ -1,9 +1,6 @@
 package com.Hackerank;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Test {
 
@@ -21,9 +18,48 @@ public class Test {
         System.out.println(input);
         System.out.println(input.get(1));
 
+        String str="JAVA IS AWESOME";
+        String array[]=str.split(" ");
+        System.out.println(array[1]);
+        System.out.println(reverseIndividual("HOW ARE YOU"));
+    }
+
+    public static void hashMap(){
+        HashMap<Integer,String> map=new HashMap<>();
+        map.put(1,"ABC");
+        map.put(2,"BCD");
+        map.put(3,"CDM");
+        map.put(4,"ERF");
+
+       Set<Map.Entry<Integer,String>> entryset=map.entrySet();
+
+       for (Map.Entry<Integer,String> entry:entryset){
+
+           System.out.println(entry.getKey() + entry.getValue());
+       }
+
+    }
+
+    public static String reverseIndividual(String str){
+
+        String string[]=str.split(" ");
+        int n=string.length;
+        String reversestring="";
 
 
+        for(int i=0;i<n;i++){
+
+            String word=string[i];
+            String reverseword="";
+
+            for(int j=n-1;j>=0;j--){
+                reverseword=reverseword+word.charAt(j);
+            }
+
+            reversestring=reversestring+reverseword+ " ";
+        }
 
 
+        return reversestring;
     }
 }
