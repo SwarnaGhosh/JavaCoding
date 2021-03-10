@@ -9,6 +9,7 @@ public class Test {
     int n=4;
     int round=0;
 
+
     input.add(33);
     input.add(45);
     input.add(67);
@@ -19,6 +20,7 @@ public class Test {
         System.out.println(input.get(1));
 
         String str="JAVA IS AWESOME";
+        System.out.println(reverseOrder(str));
         String array[]=str.split(" ");
         System.out.println(array[1]);
         System.out.println(reverseIndividual("HOW ARE YOU"));
@@ -38,6 +40,18 @@ public class Test {
            System.out.println(entry.getKey() + entry.getValue());
        }
 
+    }
+
+    public static String reverseOrder(String str){
+
+        String string[]=str.split(" ");
+
+        String reverse="";
+
+        for(int i=string.length-1;i>=0;i--){
+            reverse=reverse+string[i]+ " ";
+        }
+        return reverse;
     }
 
     public static String reverseIndividual(String str){
