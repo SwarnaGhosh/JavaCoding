@@ -6,15 +6,19 @@ public class Inheritence {
     }
 
     public void Method2(){
-        System.out.println("Anothe BaseMethod");
+
+        System.out.println("Another BaseMethod");
     }
 }
 
 class Child extends Inheritence{
 
     public void Method(){
+
         System.out.println("ChildClass");
     }
+
+
 }
 
 class Main{
@@ -22,6 +26,7 @@ class Main{
         Child child = new Child();
         child.Method();
         child.Method2();
+
 
         Inheritence base2 = new Inheritence();
         base2.Method();

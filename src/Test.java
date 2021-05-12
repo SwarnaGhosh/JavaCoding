@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Test {
 
@@ -18,6 +19,8 @@ public class Test {
                 }
 
             }
+
+            System.out.println( input.stream().filter(value->value/5==0).collect(Collectors.toList()));
 
             for (Map.Entry<Integer,Integer> entry:result.entrySet()){
                 System.out.println(entry.getKey()+"--"+entry.getValue());

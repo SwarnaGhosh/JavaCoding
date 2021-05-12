@@ -8,6 +8,10 @@ public class ReverseString {
 
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
+        // seperatorReverse(input);i
+
+        StringBuilder str1 = new StringBuilder(input);
+        System.out.println(str1.reverse());
         reverseWhole(input);
         reverseIndividual(input);
         sameOrderreverse(input);
@@ -52,5 +56,16 @@ public class ReverseString {
         }
         System.out.println(reverse);
 
+    }
+
+    public static void seperatorReverse(String string){
+        String word[] = string.split(",");
+
+        String reverse="";
+        for(int i =word.length-1;i>=0;i--){
+            reverse = reverse+word[i];
+        }
+
+        System.out.println(reverse);
     }
 }

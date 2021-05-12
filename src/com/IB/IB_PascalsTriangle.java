@@ -4,33 +4,21 @@ import java.util.ArrayList;
 public class IB_PascalsTriangle {
 
     public static ArrayList<ArrayList<Integer>> generate(int A){
-    ArrayList<ArrayList<Integer>> arr = new ArrayList<>();
 
-        if (A == 0) return arr;
-
-    ArrayList<Integer> temp;
-    int count = 0;
-
-        while (count < A) {
-        temp = new ArrayList<>();
-        int j = 0;
-        while (j<=count) {
-            if (j == 0 || j == count) {
-                temp.add(1);
+        ArrayList<ArrayList<Integer>> list = new ArrayList<>();
+        for(int i = 0; i < A; i++) {
+            list.add(new ArrayList<>());
+            for (int j = 0; j <= i; j++) {
+                if(j == i || j == 0) {
+                    list.get(i).add(1);
+                } else {
+                    list.get(i).add(list.get(i-1).get(j) + list.get(i-1).get(j-1));
+                }
             }
-            else {
-                temp.add(arr.get(count-1).get(j-1) + arr.get(count-1).get(j));
-            }
-
-            j++;
         }
-
-        arr.add(temp);
-        count++;
+        return list;
     }
-
-        return arr;
-   }
+   
 
     public static void main(String[] args) {
         int n =3;
